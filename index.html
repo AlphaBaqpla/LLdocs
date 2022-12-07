@@ -8,6 +8,9 @@
             location.assign('./en');
         } else if (navigator.language.substring(0, 2) == 'zh') {
             location.assign('./zh-Hans');
+        }
+        else if (navigator.language.substring(0, 2) == 'ru') {
+            location.assign('./ru');
         } else {
             location.assign('./en');
         }
