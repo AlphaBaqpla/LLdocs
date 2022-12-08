@@ -2,10 +2,10 @@
 
 # LiteLoaderBDS <small>v2</small>
 
-> An epoch-making & cross-language plugin loader for Minecraft Bedrock Dedicated Server.
+> Эпохальный и мульти-язычный загрузчик плагинов для Minecraft Bedrock Dedicated Server.
 
 [GitHub](https://github.com/LiteLDev/LiteLoaderBDS)
-[Home Page](https://www.litebds.com)
-[Read Docs](/README.md)
+[Домашняя Страница](https://www.litebds.com)
+[Документация](/README.md)
 
 ![](../assets/banner.webp)
