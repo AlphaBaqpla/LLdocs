@@ -72,6 +72,6 @@
     - [👓 Архитектура](/Maintenance/Analysis.md)
     - [🎯 Содействие](/Maintenance/Coding.md)
     - [🚥 Гайд по C++ Стилю](/Maintenance/StyleGuide.md)
-    - [💡 Выводы](/ru/Maintenance/Conclusion.md)
+    - [💡 Выводы](/Maintenance/Conclusion.md)
 
 - [💦 Ченджлог](https://github.com/LiteLDev/LiteLoaderBDS/releases)
