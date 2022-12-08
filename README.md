@@ -2,7 +2,7 @@
 
 This is the documentation for LiteLoaderBDS.
 
-If you would like to preview the latest official version, please visit [LiteLoaderBDS Documentation](https://docs.litebds.com/en) or [LiteLoaderBDS文档](https://docs.litebds.com/zh-Hans) or [Документация LiteLoaderBDS](https://docs.litebds.com/ru )
+If you would like to preview the latest official version, please visit [LiteLoaderBDS Documentation](https://docs.litebds.com/en) or [LiteLoaderBDS文档](https://docs.litebds.com/zh-Hans) or [Документация LiteLoaderBDS](https://docs.litebds.com/ru)
 
 ## Contribution
 
