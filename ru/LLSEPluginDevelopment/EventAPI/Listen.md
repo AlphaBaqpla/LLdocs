@@ -1,40 +1,40 @@
-# LLSE - Event Listening Documentation
+# LLSE - Документация прослушки событий
 
-> The event system allows plugins to **respond** to certain game events, allowing you to execute code when certain events occur.
+> Система событий позволяет плагинам **реагировать** на разные игроквые события, позволяет выполнять код, когда таковые случаются.
 
-The following APIs provide the ability to listen to **game events** and respond to them.
+Следущие API позволяют слушать **игровые события** и реагировать на них.
 
-## 🔔 Monitor API
+## 🔔 API мониторинга
 
-Register the specified listener function.  
-When a certain event in the game occurs, the corresponding listener function you set will be called by the engine, and you can process the related event at this time.  
+Регистрация указанной функции прослушки.  
+Когда происходит событие в игре, функция просушки, будет вызвана движком и вы сможете обработать событие. 
 
-### Add a Listener  
+### Добавление прослушки
 
-`mc.listen(event,callback)`
+`mc.listen(событие, обратный вызов)`
 
-- Parameters: 
-  - event : `String`  
-    The name of the event to listen for (see the list of listening events below).
-  - callback : `Function`  
-    Registered listener function (see below for function-related parameters).  
-    When the specified event occurs, BDS will call the listener function you give and pass in the corresponding parameters.
-- Return value: Whether the event was successfully monitored.
-- Return value type: `Boolean` 
-
-<br>
-
-### Intercept Event
-
-In LLSE's event monitoring system, generally you can pass `return false` to intercept an event that can be intercepted. Intercepting an event means that after the script intercepts the BDS will no longer handle the event as if it never happened.
-For example: intercepting a chat event will cause everyone to not see the chat message  
-
-However, intercepting events is only valid for BDS.  
-That is to say, intercepting an event does not affect other LLSE scripts that have corresponding listeners to process this event, but BDS can no longer receive it.
+- Параметры: 
+  - событие : `Строка`  
+    Имя события для просушки (список доступных событий ниже).
+  - обратный вызов : `Функция`  
+    Регистрация функции прослушки (параметры функций ниже).  
+    Когда просиходит событие, BDS вызовет вашу функцию с соотвествующими параметрами.
+- Возвращаемое значение: Было ли событие успешно отслежено.
+- Тип возвращаемого значения: `Булевый` 
 
 <br>
 
-### Avoid Mistakes
+### Отмена события
 
-Sometimes, calling a specific API inside some event listeners will cause an infinite loop to collapse. Please avoid these situations.  
-Example: If you use the `onConsoleCmd` event listener, and you call `mc.runcmd(Ex)`, it will trigger another `onConsoleCmd` event, which will lead to an infinite loop.
+В системе мониторинга событий LLSE, вы можете `return false` что бы отменить событие (которое может быть отменено). Отмена события означает, что BDS больше не будет обрабатывать это событие, как будто его и не было.
+Например: Отмена события чата, означает, что никто не увидит ваше сообщение.
+
+Однако перехват событий работает только с BDS.  
+То есть перехват событий не влияет на другие скрипты LLSE, которые тоже обробатывают это событие, но BDS его не получит.
+
+<br>
+
+### Избегая ошибок
+
+Иногда, вызов определенного API внутри некоторых слушателей приведет к бесконечному циклу. Пожалуйста, избегайте таких ситуаций.  
+Например: Если вы используете прослушку события `onConsoleCmd`, и используете `mc.runcmd(Ex)`, это вызовет еще одно событие `onConsoleCmd`, что превратиться в бесконечный цикл.
